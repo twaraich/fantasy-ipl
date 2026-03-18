@@ -149,11 +149,31 @@ export default async function LeaguePage({
                 Manage Roster
               </Link>
               <Link
+                href={`/league/${id}/transfers`}
+                className="rounded-xl bg-emerald-600 py-3 text-center font-semibold text-white transition-colors hover:bg-emerald-500"
+              >
+                Transfers
+              </Link>
+              <Link
+                href={`/league/${id}/results`}
+                className="rounded-xl border border-indigo-400/30 py-3 text-center font-semibold text-indigo-200 transition-colors hover:bg-indigo-900/50"
+              >
+                Match Results
+              </Link>
+              <Link
                 href={`/league/${id}/scores`}
                 className="rounded-xl border border-indigo-400/30 py-3 text-center font-semibold text-indigo-200 transition-colors hover:bg-indigo-900/50"
               >
                 Enter Scores
               </Link>
+              {isCreator && (
+                <Link
+                  href={`/league/${id}/admin`}
+                  className="rounded-xl border border-amber-400/30 py-3 text-center font-semibold text-amber-200 transition-colors hover:bg-amber-900/30"
+                >
+                  Admin Panel
+                </Link>
+              )}
             </>
           )}
         </div>
